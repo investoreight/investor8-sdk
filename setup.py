@@ -27,7 +27,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="Investor8.Core",
-    author_email="",
+    author_email="mehrdadrafiei@outlook.com",
     url="",
     keywords=["Swagger", "Investor8.Core"],
     install_requires=REQUIRES,
