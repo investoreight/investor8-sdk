@@ -1,0 +1,10 @@
+# HistoricalMetadataMetricsDto
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | **dict(str, dict(str, list[HistoricalMetricValueDto]))** |  | [optional] 
+**metadata** | [**list[MetricsMetadataResponseDto]**](MetricsMetadataResponseDto.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
