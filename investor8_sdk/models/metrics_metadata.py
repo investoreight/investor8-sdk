@@ -38,6 +38,7 @@ class MetricsMetadata(object):
         'type': 'str',
         'last_modified': 'int',
         'period_type_default': 'str',
+        'remarks': 'str',
         'id': 'str'
     }
 
@@ -52,10 +53,11 @@ class MetricsMetadata(object):
         'type': 'Type',
         'last_modified': 'LastModified',
         'period_type_default': 'PeriodTypeDefault',
+        'remarks': 'Remarks',
         'id': 'Id'
     }
 
-    def __init__(self, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, id=None):  # noqa: E501
+    def __init__(self, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, id=None):  # noqa: E501
         """MetricsMetadata - a model defined in Swagger"""  # noqa: E501
         self._metric_name = None
         self._display_name = None
@@ -67,6 +69,7 @@ class MetricsMetadata(object):
         self._type = None
         self._last_modified = None
         self._period_type_default = None
+        self._remarks = None
         self._id = None
         self.discriminator = None
         if metric_name is not None:
@@ -89,6 +92,8 @@ class MetricsMetadata(object):
             self.last_modified = last_modified
         if period_type_default is not None:
             self.period_type_default = period_type_default
+        if remarks is not None:
+            self.remarks = remarks
         if id is not None:
             self.id = id
 
@@ -301,6 +306,27 @@ class MetricsMetadata(object):
         """
 
         self._period_type_default = period_type_default
+
+    @property
+    def remarks(self):
+        """Gets the remarks of this MetricsMetadata.  # noqa: E501
+
+
+        :return: The remarks of this MetricsMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._remarks
+
+    @remarks.setter
+    def remarks(self, remarks):
+        """Sets the remarks of this MetricsMetadata.
+
+
+        :param remarks: The remarks of this MetricsMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._remarks = remarks
 
     @property
     def id(self):
