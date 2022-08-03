@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "investor8-sdk"
-VERSION = "1.1.35"
+VERSION = "1.1.37"
 # To install the library, run the following
 #
 # python setup.py install
@@ -27,7 +27,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="Investor8.Core",
-    author_email="mehrdadrafiei@outlook.com",
+    author_email="",
     url="",
     keywords=["Swagger", "Investor8.Core"],
     install_requires=REQUIRES,
