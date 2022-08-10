@@ -1,0 +1,29 @@
+name: Release SDK 
+on: [pull_request, push]
+
+jobs:
+  release_sdk:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+          architecture: x64
+      - name: Set Package Version
+        run: echo "::set-output name=version::$(python setup.py -V)"
+        id: version
+      - name: Release MSI
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: investor8-sdk v${{ steps.version.outputs.version }}
+          tag_name: v${{ steps.version.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
