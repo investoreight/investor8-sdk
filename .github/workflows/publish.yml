@@ -23,7 +23,7 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: investor8-sdk v${{ steps.version.outputs.version }}
+          release_name: investor8 Python SDK v${{ steps.version.outputs.version }}
           tag_name: v${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ github.token }}

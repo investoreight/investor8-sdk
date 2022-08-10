@@ -8,17 +8,17 @@ git_repo_id=$2
 release_note=$3
 
 if [ "$git_user_id" = "" ]; then
-    git_user_id="GIT_USER_ID"
+    git_user_id="investoreight"
     echo "[INFO] No command line input provided. Set \$git_user_id to $git_user_id"
 fi
 
 if [ "$git_repo_id" = "" ]; then
-    git_repo_id="GIT_REPO_ID"
+    git_repo_id="investor8-sdk"
     echo "[INFO] No command line input provided. Set \$git_repo_id to $git_repo_id"
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Minor update"
+    release_note="Github integration demo"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
@@ -44,9 +44,9 @@ if [ "$git_remote" = "" ]; then # git remote not defined
 
 fi
 
-git pull origin main
+git pull origin master
 
 # Pushes (Forces) the changes in the local repository up to the remote repository
 echo "Git pushing to https://github.com/${git_user_id}/${git_repo_id}.git"
-git push origin main 2>&1 | grep -v 'To https'
+git push origin master 2>&1 | grep -v 'To https'
 
