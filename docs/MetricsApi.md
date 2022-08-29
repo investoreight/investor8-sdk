@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**get_all_latest_financial_metrics**](MetricsApi.md#get_all_latest_financial_metrics) | **GET** /Metrics/financial/all/latest | 
 [**get_all_latest_value_metrics**](MetricsApi.md#get_all_latest_value_metrics) | **GET** /Metrics/value/all/latest | 
 [**get_current_metrics**](MetricsApi.md#get_current_metrics) | **GET** /Metrics/current | 
+[**get_current_metrics_0**](MetricsApi.md#get_current_metrics_0) | **GET** /Metrics/current/v2 | 
 [**get_current_momentum**](MetricsApi.md#get_current_momentum) | **GET** /Metrics/momentum/current/{ticker} | 
 [**get_distinct_metric_metadata_properties**](MetricsApi.md#get_distinct_metric_metadata_properties) | **GET** /Metrics/metadata/properties/distinct | 
 [**get_historical_daily_metrics**](MetricsApi.md#get_historical_daily_metrics) | **GET** /Metrics/historical/daily/{ticker} | 
@@ -18,6 +19,7 @@ Method | HTTP request | Description
 [**get_historical_metrics**](MetricsApi.md#get_historical_metrics) | **GET** /Metrics/historical | 
 [**get_historical_momentum**](MetricsApi.md#get_historical_momentum) | **GET** /Metrics/momentum/historical/{ticker} | 
 [**get_historical_value**](MetricsApi.md#get_historical_value) | **GET** /Metrics/historical/value/{ticker} | 
+[**get_latest_financials_period**](MetricsApi.md#get_latest_financials_period) | **GET** /Metrics/financials/latest/period | 
 [**get_latest_growth_metrics**](MetricsApi.md#get_latest_growth_metrics) | **GET** /Metrics/growth/latest/{ticker} | 
 [**get_list_financial_metrics_metadata**](MetricsApi.md#get_list_financial_metrics_metadata) | **GET** /Metrics/metadata/list/financials | 
 [**get_list_metrics_metadata**](MetricsApi.md#get_list_metrics_metadata) | **GET** /Metrics/metadata/list | 
@@ -355,6 +357,64 @@ Name | Type | Description  | Notes
  **symbols** | **str**|  | [optional] 
  **metrics** | **str**|  | [optional] 
  **period_offset** | **int**|  | [optional] [default to 0]
+
+### Return type
+
+[**SymbolsCurrentMetricsDto**](SymbolsCurrentMetricsDto.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_current_metrics_0**
+> SymbolsCurrentMetricsDto get_current_metrics_0(symbols=symbols, metrics=metrics)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.MetricsApi(investor8_sdk.ApiClient(configuration))
+symbols = 'symbols_example' # str |  (optional)
+metrics = 'metrics_example' # str |  (optional)
+
+try:
+    api_response = api_instance.get_current_metrics_0(symbols=symbols, metrics=metrics)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MetricsApi->get_current_metrics_0: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbols** | **str**|  | [optional] 
+ **metrics** | **str**|  | [optional] 
 
 ### Return type
 
@@ -846,6 +906,64 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_latest_financials_period**
+> dict(str, str) get_latest_financials_period(period_type=period_type, refresh_cache=refresh_cache)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.MetricsApi(investor8_sdk.ApiClient(configuration))
+period_type = 'period_type_example' # str |  (optional)
+refresh_cache = false # bool |  (optional) (default to false)
+
+try:
+    api_response = api_instance.get_latest_financials_period(period_type=period_type, refresh_cache=refresh_cache)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MetricsApi->get_latest_financials_period: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **period_type** | **str**|  | [optional] 
+ **refresh_cache** | **bool**|  | [optional] [default to false]
+
+### Return type
+
+**dict(str, str)**
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

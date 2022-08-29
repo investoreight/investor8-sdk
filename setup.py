@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "investor8-sdk"
-VERSION = "1.1.40"
+VERSION = "1.1.42"
 # To install the library, run the following
 #
 # python setup.py install
@@ -47,7 +47,7 @@ PROJECT_URLS = {
 setup(
     name=NAME,
     version=VERSION,
-	project_urls=PROJECT_URLS,
+    project_urls=PROJECT_URLS,
     description="Investoreight Core API",
     author_email="info@investoreight.com",
     url="",
