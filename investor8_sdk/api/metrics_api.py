@@ -590,12 +590,12 @@ class MetricsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_current_metrics_0(self, **kwargs):  # noqa: E501
-        """get_current_metrics_0  # noqa: E501
+    def get_current_metrics_v2(self, **kwargs):  # noqa: E501
+        """get_current_metrics_v2  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_current_metrics_0(async_req=True)
+        >>> thread = api.get_current_metrics_v2(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -607,17 +607,17 @@ class MetricsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_current_metrics_0_with_http_info(**kwargs)  # noqa: E501
+            return self.get_current_metrics_v2_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.get_current_metrics_0_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_current_metrics_v2_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def get_current_metrics_0_with_http_info(self, **kwargs):  # noqa: E501
-        """get_current_metrics_0  # noqa: E501
+    def get_current_metrics_v2_with_http_info(self, **kwargs):  # noqa: E501
+        """get_current_metrics_v2  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_current_metrics_0_with_http_info(async_req=True)
+        >>> thread = api.get_current_metrics_v2_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -639,7 +639,7 @@ class MetricsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_current_metrics_0" % key
+                    " to method get_current_metrics_v2" % key
                 )
             params[key] = val
         del params['kwargs']

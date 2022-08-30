@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**get_all_latest_financial_metrics**](MetricsApi.md#get_all_latest_financial_metrics) | **GET** /Metrics/financial/all/latest | 
 [**get_all_latest_value_metrics**](MetricsApi.md#get_all_latest_value_metrics) | **GET** /Metrics/value/all/latest | 
 [**get_current_metrics**](MetricsApi.md#get_current_metrics) | **GET** /Metrics/current | 
-[**get_current_metrics_0**](MetricsApi.md#get_current_metrics_0) | **GET** /Metrics/current/v2 | 
+[**get_current_metrics_v2**](MetricsApi.md#get_current_metrics_v2) | **GET** /Metrics/current/v2 | 
 [**get_current_momentum**](MetricsApi.md#get_current_momentum) | **GET** /Metrics/momentum/current/{ticker} | 
 [**get_distinct_metric_metadata_properties**](MetricsApi.md#get_distinct_metric_metadata_properties) | **GET** /Metrics/metadata/properties/distinct | 
 [**get_historical_daily_metrics**](MetricsApi.md#get_historical_daily_metrics) | **GET** /Metrics/historical/daily/{ticker} | 
@@ -373,8 +373,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_current_metrics_0**
-> SymbolsCurrentMetricsDto get_current_metrics_0(symbols=symbols, metrics=metrics)
+# **get_current_metrics_v2**
+> SymbolsCurrentMetricsDto get_current_metrics_v2(symbols=symbols, metrics=metrics)
 
 
 
@@ -403,10 +403,10 @@ symbols = 'symbols_example' # str |  (optional)
 metrics = 'metrics_example' # str |  (optional)
 
 try:
-    api_response = api_instance.get_current_metrics_0(symbols=symbols, metrics=metrics)
+    api_response = api_instance.get_current_metrics_v2(symbols=symbols, metrics=metrics)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MetricsApi->get_current_metrics_0: %s\n" % e)
+    print("Exception when calling MetricsApi->get_current_metrics_v2: %s\n" % e)
 ```
 
 ### Parameters
