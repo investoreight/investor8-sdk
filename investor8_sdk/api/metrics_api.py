@@ -504,7 +504,6 @@ class MetricsApi(object):
         :param async_req bool
         :param str symbols:
         :param str metrics:
-        :param int period_offset:
         :return: SymbolsCurrentMetricsDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -527,13 +526,12 @@ class MetricsApi(object):
         :param async_req bool
         :param str symbols:
         :param str metrics:
-        :param int period_offset:
         :return: SymbolsCurrentMetricsDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['symbols', 'metrics', 'period_offset']  # noqa: E501
+        all_params = ['symbols', 'metrics']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -558,8 +556,6 @@ class MetricsApi(object):
             query_params.append(('symbols', params['symbols']))  # noqa: E501
         if 'metrics' in params:
             query_params.append(('metrics', params['metrics']))  # noqa: E501
-        if 'period_offset' in params:
-            query_params.append(('periodOffset', params['period_offset']))  # noqa: E501
 
         header_params = {}
 
@@ -576,99 +572,6 @@ class MetricsApi(object):
 
         return self.api_client.call_api(
             '/Metrics/current', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='SymbolsCurrentMetricsDto',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_current_metrics_v2(self, **kwargs):  # noqa: E501
-        """get_current_metrics_v2  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_current_metrics_v2(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str symbols:
-        :param str metrics:
-        :return: SymbolsCurrentMetricsDto
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_current_metrics_v2_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.get_current_metrics_v2_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def get_current_metrics_v2_with_http_info(self, **kwargs):  # noqa: E501
-        """get_current_metrics_v2  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_current_metrics_v2_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str symbols:
-        :param str metrics:
-        :return: SymbolsCurrentMetricsDto
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['symbols', 'metrics']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_current_metrics_v2" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-        if 'symbols' in params:
-            query_params.append(('symbols', params['symbols']))  # noqa: E501
-        if 'metrics' in params:
-            query_params.append(('metrics', params['metrics']))  # noqa: E501
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['apiKey', 'bearerCoreAuth']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/Metrics/current/v2', 'GET',
             path_params,
             query_params,
             header_params,
