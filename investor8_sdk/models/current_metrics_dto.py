@@ -30,6 +30,7 @@ class CurrentMetricsDto(object):
     swagger_types = {
         'symbol': 'str',
         'metric': 'str',
+        'input_metric': 'str',
         'value': 'str',
         'period': 'str',
         'period_date_time': 'datetime'
@@ -38,15 +39,17 @@ class CurrentMetricsDto(object):
     attribute_map = {
         'symbol': 'Symbol',
         'metric': 'Metric',
+        'input_metric': 'InputMetric',
         'value': 'Value',
         'period': 'Period',
         'period_date_time': 'PeriodDateTime'
     }
 
-    def __init__(self, symbol=None, metric=None, value=None, period=None, period_date_time=None):  # noqa: E501
+    def __init__(self, symbol=None, metric=None, input_metric=None, value=None, period=None, period_date_time=None):  # noqa: E501
         """CurrentMetricsDto - a model defined in Swagger"""  # noqa: E501
         self._symbol = None
         self._metric = None
+        self._input_metric = None
         self._value = None
         self._period = None
         self._period_date_time = None
@@ -55,6 +58,8 @@ class CurrentMetricsDto(object):
             self.symbol = symbol
         if metric is not None:
             self.metric = metric
+        if input_metric is not None:
+            self.input_metric = input_metric
         if value is not None:
             self.value = value
         if period is not None:
@@ -103,6 +108,27 @@ class CurrentMetricsDto(object):
         """
 
         self._metric = metric
+
+    @property
+    def input_metric(self):
+        """Gets the input_metric of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The input_metric of this CurrentMetricsDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._input_metric
+
+    @input_metric.setter
+    def input_metric(self, input_metric):
+        """Sets the input_metric of this CurrentMetricsDto.
+
+
+        :param input_metric: The input_metric of this CurrentMetricsDto.  # noqa: E501
+        :type: str
+        """
+
+        self._input_metric = input_metric
 
     @property
     def value(self):

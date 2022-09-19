@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **symbol** | **str** |  | [optional] 
 **metric** | **str** |  | [optional] 
+**input_metric** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
 **period** | **str** |  | [optional] 
 **period_date_time** | **datetime** |  | [optional] 
