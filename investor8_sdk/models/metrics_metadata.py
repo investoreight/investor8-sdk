@@ -39,6 +39,7 @@ class MetricsMetadata(object):
         'last_modified': 'int',
         'period_type_default': 'str',
         'remarks': 'str',
+        'screening_conditions': 'list[ScreeningCondition]',
         'id': 'str'
     }
 
@@ -54,10 +55,11 @@ class MetricsMetadata(object):
         'last_modified': 'LastModified',
         'period_type_default': 'PeriodTypeDefault',
         'remarks': 'Remarks',
+        'screening_conditions': 'ScreeningConditions',
         'id': 'Id'
     }
 
-    def __init__(self, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, id=None):  # noqa: E501
+    def __init__(self, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, screening_conditions=None, id=None):  # noqa: E501
         """MetricsMetadata - a model defined in Swagger"""  # noqa: E501
         self._metric_name = None
         self._display_name = None
@@ -70,6 +72,7 @@ class MetricsMetadata(object):
         self._last_modified = None
         self._period_type_default = None
         self._remarks = None
+        self._screening_conditions = None
         self._id = None
         self.discriminator = None
         if metric_name is not None:
@@ -94,6 +97,8 @@ class MetricsMetadata(object):
             self.period_type_default = period_type_default
         if remarks is not None:
             self.remarks = remarks
+        if screening_conditions is not None:
+            self.screening_conditions = screening_conditions
         if id is not None:
             self.id = id
 
@@ -327,6 +332,27 @@ class MetricsMetadata(object):
         """
 
         self._remarks = remarks
+
+    @property
+    def screening_conditions(self):
+        """Gets the screening_conditions of this MetricsMetadata.  # noqa: E501
+
+
+        :return: The screening_conditions of this MetricsMetadata.  # noqa: E501
+        :rtype: list[ScreeningCondition]
+        """
+        return self._screening_conditions
+
+    @screening_conditions.setter
+    def screening_conditions(self, screening_conditions):
+        """Sets the screening_conditions of this MetricsMetadata.
+
+
+        :param screening_conditions: The screening_conditions of this MetricsMetadata.  # noqa: E501
+        :type: list[ScreeningCondition]
+        """
+
+        self._screening_conditions = screening_conditions
 
     @property
     def id(self):

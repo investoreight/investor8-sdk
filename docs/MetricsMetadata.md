@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **last_modified** | **int** |  | [optional] 
 **period_type_default** | **str** |  | [optional] 
 **remarks** | **str** |  | [optional] 
+**screening_conditions** | [**list[ScreeningCondition]**](ScreeningCondition.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -91,6 +91,7 @@ from investor8_sdk.models.result_field import ResultField
 from investor8_sdk.models.return_metrics import ReturnMetrics
 from investor8_sdk.models.sa_attributes_prices import SAAttributesPrices
 from investor8_sdk.models.sa_sector_price_dto import SASectorPriceDto
+from investor8_sdk.models.screening_condition import ScreeningCondition
 from investor8_sdk.models.sector_returns_dto import SectorReturnsDto
 from investor8_sdk.models.standardized_financial import StandardizedFinancial
 from investor8_sdk.models.stock_earning_dto import StockEarningDto
