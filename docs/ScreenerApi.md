@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**get_list_ip_os**](ScreenerApi.md#get_list_ip_os) | **GET** /Screener/ipo/list | 
 [**get_top_stocks**](ScreenerApi.md#get_top_stocks) | **GET** /Screener/top/{category} | 
 [**get_upcoming_ipos**](ScreenerApi.md#get_upcoming_ipos) | **GET** /Screener/ipo/upcoming | 
+[**search**](ScreenerApi.md#search) | **GET** /Screener/search | 
 
 # **get_all_sectors_returns**
 > dict(str, list[SectorReturnsDto]) get_all_sectors_returns(period=period, refresh_cache=refresh_cache)
@@ -351,6 +352,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[StockIpo]**](StockIpo.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search**
+> list[str] search(conditions=conditions)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.ScreenerApi(investor8_sdk.ApiClient(configuration))
+conditions = 'conditions_example' # str |  (optional)
+
+try:
+    api_response = api_instance.search(conditions=conditions)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ScreenerApi->search: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conditions** | **str**|  | [optional] 
+
+### Return type
+
+**list[str]**
 
 ### Authorization
 
