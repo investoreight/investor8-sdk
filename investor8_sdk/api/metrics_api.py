@@ -1762,6 +1762,8 @@ class MetricsApi(object):
         :param str name:
         :param int page_index:
         :param int page_size:
+        :param str sort_by:
+        :param str sort_direction:
         :return: list[MetricsMetadata]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1789,12 +1791,14 @@ class MetricsApi(object):
         :param str name:
         :param int page_index:
         :param int page_size:
+        :param str sort_by:
+        :param str sort_direction:
         :return: list[MetricsMetadata]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['category', 'type', 'display_format', 'data_format', 'name', 'page_index', 'page_size']  # noqa: E501
+        all_params = ['category', 'type', 'display_format', 'data_format', 'name', 'page_index', 'page_size', 'sort_by', 'sort_direction']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1829,6 +1833,10 @@ class MetricsApi(object):
             query_params.append(('pageIndex', params['page_index']))  # noqa: E501
         if 'page_size' in params:
             query_params.append(('pageSize', params['page_size']))  # noqa: E501
+        if 'sort_by' in params:
+            query_params.append(('sortBy', params['sort_by']))  # noqa: E501
+        if 'sort_direction' in params:
+            query_params.append(('sortDirection', params['sort_direction']))  # noqa: E501
 
         header_params = {}
 

@@ -1070,7 +1070,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_list_metrics_metadata**
-> list[MetricsMetadata] get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, page_index=page_index, page_size=page_size)
+> list[MetricsMetadata] get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, page_index=page_index, page_size=page_size, sort_by=sort_by, sort_direction=sort_direction)
 
 
 
@@ -1102,9 +1102,11 @@ data_format = 'data_format_example' # str |  (optional)
 name = 'name_example' # str |  (optional)
 page_index = 0 # int |  (optional) (default to 0)
 page_size = 50 # int |  (optional) (default to 50)
+sort_by = 'displayname' # str |  (optional) (default to displayname)
+sort_direction = 'asc' # str |  (optional) (default to asc)
 
 try:
-    api_response = api_instance.get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, page_index=page_index, page_size=page_size)
+    api_response = api_instance.get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, page_index=page_index, page_size=page_size, sort_by=sort_by, sort_direction=sort_direction)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MetricsApi->get_list_metrics_metadata: %s\n" % e)
@@ -1121,6 +1123,8 @@ Name | Type | Description  | Notes
  **name** | **str**|  | [optional] 
  **page_index** | **int**|  | [optional] [default to 0]
  **page_size** | **int**|  | [optional] [default to 50]
+ **sort_by** | **str**|  | [optional] [default to displayname]
+ **sort_direction** | **str**|  | [optional] [default to asc]
 
 ### Return type
 
