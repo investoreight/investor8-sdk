@@ -616,6 +616,8 @@ class ScreenerApi(object):
 
         :param async_req bool
         :param str conditions:
+        :param str order_by:
+        :param str order_direction:
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -637,12 +639,14 @@ class ScreenerApi(object):
 
         :param async_req bool
         :param str conditions:
+        :param str order_by:
+        :param str order_direction:
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['conditions']  # noqa: E501
+        all_params = ['conditions', 'order_by', 'order_direction']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -665,6 +669,10 @@ class ScreenerApi(object):
         query_params = []
         if 'conditions' in params:
             query_params.append(('conditions', params['conditions']))  # noqa: E501
+        if 'order_by' in params:
+            query_params.append(('orderBy', params['order_by']))  # noqa: E501
+        if 'order_direction' in params:
+            query_params.append(('orderDirection', params['order_direction']))  # noqa: E501
 
         header_params = {}
 

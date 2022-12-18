@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **search**
-> list[str] search(conditions=conditions)
+> list[str] search(conditions=conditions, order_by=order_by, order_direction=order_direction)
 
 
 
@@ -391,9 +391,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = investor8_sdk.ScreenerApi(investor8_sdk.ApiClient(configuration))
 conditions = 'conditions_example' # str |  (optional)
+order_by = 'order_by_example' # str |  (optional)
+order_direction = 'desc' # str |  (optional) (default to desc)
 
 try:
-    api_response = api_instance.search(conditions=conditions)
+    api_response = api_instance.search(conditions=conditions, order_by=order_by, order_direction=order_direction)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScreenerApi->search: %s\n" % e)
@@ -404,6 +406,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conditions** | **str**|  | [optional] 
+ **order_by** | **str**|  | [optional] 
+ **order_direction** | **str**|  | [optional] [default to desc]
 
 ### Return type
 
