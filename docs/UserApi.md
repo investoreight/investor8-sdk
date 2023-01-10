@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**add_to_watchlist**](UserApi.md#add_to_watchlist) | **POST** /User/watchlist/add | 
 [**create_login_authentication_request**](UserApi.md#create_login_authentication_request) | **POST** /User/authentication/request/login | 
 [**create_plot**](UserApi.md#create_plot) | **POST** /User/plot | 
+[**create_screen**](UserApi.md#create_screen) | **POST** /User/screen | 
 [**create_watchlist**](UserApi.md#create_watchlist) | **POST** /User/watchlist | 
 [**get_aggregated_terminal_os_and_versions**](UserApi.md#get_aggregated_terminal_os_and_versions) | **GET** /User/terminal/os/versions | 
 [**get_roles**](UserApi.md#get_roles) | **GET** /User/roles | 
+[**get_screen**](UserApi.md#get_screen) | **GET** /User/screen/{id} | 
+[**get_screens_by_user**](UserApi.md#get_screens_by_user) | **GET** /User/screen/byuser/{userId} | 
 [**get_terminal_log**](UserApi.md#get_terminal_log) | **GET** /User/terminal/log/{id} | 
 [**get_terminal_logs**](UserApi.md#get_terminal_logs) | **GET** /User/terminal/list/log | 
 [**get_watchlist**](UserApi.md#get_watchlist) | **GET** /User/watchlist/{id} | 
@@ -188,6 +191,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_screen**
+> Screen create_screen(body=body)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.UserApi(investor8_sdk.ApiClient(configuration))
+body = investor8_sdk.CreateScreenDto() # CreateScreenDto |  (optional)
+
+try:
+    api_response = api_instance.create_screen(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->create_screen: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CreateScreenDto**](CreateScreenDto.md)|  | [optional] 
+
+### Return type
+
+[**Screen**](Screen.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_watchlist**
 > Watchlist create_watchlist(body=body)
 
@@ -345,6 +404,118 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_screen**
+> Screen get_screen(id)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.UserApi(investor8_sdk.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    api_response = api_instance.get_screen(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->get_screen: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+[**Screen**](Screen.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_screens_by_user**
+> GetScreensByUserDto get_screens_by_user(user_id)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.UserApi(investor8_sdk.ApiClient(configuration))
+user_id = 'user_id_example' # str | 
+
+try:
+    api_response = api_instance.get_screens_by_user(user_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->get_screens_by_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **str**|  | 
+
+### Return type
+
+[**GetScreensByUserDto**](GetScreensByUserDto.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

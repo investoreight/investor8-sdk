@@ -37,6 +37,7 @@ from investor8_sdk.models.authentication_source import AuthenticationSource
 from investor8_sdk.models.company_info_dto import CompanyInfoDto
 from investor8_sdk.models.create_auth_req_dto import CreateAuthReqDto
 from investor8_sdk.models.create_plot_dto import CreatePlotDto
+from investor8_sdk.models.create_screen_dto import CreateScreenDto
 from investor8_sdk.models.create_watchlist_dto import CreateWatchlistDto
 from investor8_sdk.models.current_metrics_dto import CurrentMetricsDto
 from investor8_sdk.models.current_momentum_metrics_dto import CurrentMomentumMetricsDto
@@ -48,6 +49,7 @@ from investor8_sdk.models.financial_metric_metadata_dto import FinancialMetricMe
 from investor8_sdk.models.financial_report_dto import FinancialReportDto
 from investor8_sdk.models.financial_tag import FinancialTag
 from investor8_sdk.models.financials_growth import FinancialsGrowth
+from investor8_sdk.models.get_screens_by_user_dto import GetScreensByUserDto
 from investor8_sdk.models.get_watchlists_by_user_dto import GetWatchlistsByUserDto
 from investor8_sdk.models.historical_daily_metrics_dto import HistoricalDailyMetricsDto
 from investor8_sdk.models.historical_financial_metrics import HistoricalFinancialMetrics
@@ -91,6 +93,8 @@ from investor8_sdk.models.result_field import ResultField
 from investor8_sdk.models.return_metrics import ReturnMetrics
 from investor8_sdk.models.sa_attributes_prices import SAAttributesPrices
 from investor8_sdk.models.sa_sector_price_dto import SASectorPriceDto
+from investor8_sdk.models.screen import Screen
+from investor8_sdk.models.screen_dto import ScreenDto
 from investor8_sdk.models.screening_condition import ScreeningCondition
 from investor8_sdk.models.sector_returns_dto import SectorReturnsDto
 from investor8_sdk.models.standardized_financial import StandardizedFinancial
