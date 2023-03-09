@@ -42,6 +42,7 @@ class MetricsMetadata(object):
         'screening_conditions': 'list[ScreeningCondition]',
         'internal_comment': 'str',
         'aliases': 'str',
+        'colorable': 'bool',
         'id': 'str'
     }
 
@@ -60,10 +61,11 @@ class MetricsMetadata(object):
         'screening_conditions': 'ScreeningConditions',
         'internal_comment': 'InternalComment',
         'aliases': 'Aliases',
+        'colorable': 'Colorable',
         'id': 'Id'
     }
 
-    def __init__(self, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, screening_conditions=None, internal_comment=None, aliases=None, id=None):  # noqa: E501
+    def __init__(self, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, screening_conditions=None, internal_comment=None, aliases=None, colorable=None, id=None):  # noqa: E501
         """MetricsMetadata - a model defined in Swagger"""  # noqa: E501
         self._metric_name = None
         self._display_name = None
@@ -79,6 +81,7 @@ class MetricsMetadata(object):
         self._screening_conditions = None
         self._internal_comment = None
         self._aliases = None
+        self._colorable = None
         self._id = None
         self.discriminator = None
         if metric_name is not None:
@@ -109,6 +112,8 @@ class MetricsMetadata(object):
             self.internal_comment = internal_comment
         if aliases is not None:
             self.aliases = aliases
+        if colorable is not None:
+            self.colorable = colorable
         if id is not None:
             self.id = id
 
@@ -405,6 +410,27 @@ class MetricsMetadata(object):
         """
 
         self._aliases = aliases
+
+    @property
+    def colorable(self):
+        """Gets the colorable of this MetricsMetadata.  # noqa: E501
+
+
+        :return: The colorable of this MetricsMetadata.  # noqa: E501
+        :rtype: bool
+        """
+        return self._colorable
+
+    @colorable.setter
+    def colorable(self, colorable):
+        """Sets the colorable of this MetricsMetadata.
+
+
+        :param colorable: The colorable of this MetricsMetadata.  # noqa: E501
+        :type: bool
+        """
+
+        self._colorable = colorable
 
     @property
     def id(self):
