@@ -1070,7 +1070,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_list_metrics_metadata**
-> list[MetricsMetadata] get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, page_index=page_index, page_size=page_size, sort_by=sort_by, sort_direction=sort_direction)
+> list[GetListMetricsMetadataDto] get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, page_index=page_index, page_size=page_size, sort_by=sort_by, sort_direction=sort_direction)
 
 
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[MetricsMetadata]**](MetricsMetadata.md)
+[**list[GetListMetricsMetadataDto]**](GetListMetricsMetadataDto.md)
 
 ### Authorization
 
@@ -1200,7 +1200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_metrics_metadata**
-> MetricsMetadata get_metrics_metadata(name)
+> GetMetricsMetadataDto get_metrics_metadata(name)
 
 
 
@@ -1242,7 +1242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MetricsMetadata**](MetricsMetadata.md)
+[**GetMetricsMetadataDto**](GetMetricsMetadataDto.md)
 
 ### Authorization
 

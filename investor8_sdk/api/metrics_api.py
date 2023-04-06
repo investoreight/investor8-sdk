@@ -1764,7 +1764,7 @@ class MetricsApi(object):
         :param int page_size:
         :param str sort_by:
         :param str sort_direction:
-        :return: list[MetricsMetadata]
+        :return: list[GetListMetricsMetadataDto]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1793,7 +1793,7 @@ class MetricsApi(object):
         :param int page_size:
         :param str sort_by:
         :param str sort_direction:
-        :return: list[MetricsMetadata]
+        :return: list[GetListMetricsMetadataDto]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1859,7 +1859,7 @@ class MetricsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[MetricsMetadata]',  # noqa: E501
+            response_type='list[GetListMetricsMetadataDto]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1974,7 +1974,7 @@ class MetricsApi(object):
 
         :param async_req bool
         :param str name: (required)
-        :return: MetricsMetadata
+        :return: GetMetricsMetadataDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1995,7 +1995,7 @@ class MetricsApi(object):
 
         :param async_req bool
         :param str name: (required)
-        :return: MetricsMetadata
+        :return: GetMetricsMetadataDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2049,7 +2049,7 @@ class MetricsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MetricsMetadata',  # noqa: E501
+            response_type='GetMetricsMetadataDto',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
