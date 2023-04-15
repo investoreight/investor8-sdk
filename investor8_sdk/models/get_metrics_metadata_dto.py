@@ -41,7 +41,8 @@ class GetMetricsMetadataDto(object):
         'period_type_default': 'str',
         'remarks': 'str',
         'aliases': 'str',
-        'colorable': 'bool'
+        'colorable': 'bool',
+        'short_description': 'str'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class GetMetricsMetadataDto(object):
         'period_type_default': 'PeriodTypeDefault',
         'remarks': 'Remarks',
         'aliases': 'Aliases',
-        'colorable': 'Colorable'
+        'colorable': 'Colorable',
+        'short_description': 'ShortDescription'
     }
 
-    def __init__(self, id=None, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, aliases=None, colorable=None):  # noqa: E501
+    def __init__(self, id=None, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, aliases=None, colorable=None, short_description=None):  # noqa: E501
         """GetMetricsMetadataDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._metric_name = None
@@ -77,6 +79,7 @@ class GetMetricsMetadataDto(object):
         self._remarks = None
         self._aliases = None
         self._colorable = None
+        self._short_description = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -106,6 +109,8 @@ class GetMetricsMetadataDto(object):
             self.aliases = aliases
         if colorable is not None:
             self.colorable = colorable
+        if short_description is not None:
+            self.short_description = short_description
 
     @property
     def id(self):
@@ -400,6 +405,27 @@ class GetMetricsMetadataDto(object):
         """
 
         self._colorable = colorable
+
+    @property
+    def short_description(self):
+        """Gets the short_description of this GetMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The short_description of this GetMetricsMetadataDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_description
+
+    @short_description.setter
+    def short_description(self, short_description):
+        """Sets the short_description of this GetMetricsMetadataDto.
+
+
+        :param short_description: The short_description of this GetMetricsMetadataDto.  # noqa: E501
+        :type: str
+        """
+
+        self._short_description = short_description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

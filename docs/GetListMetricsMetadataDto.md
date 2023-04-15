@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **period_type_default** | **str** |  | [optional] 
 **aliases** | **str** |  | [optional] 
 **colorable** | **bool** |  | [optional] 
+**short_description** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
