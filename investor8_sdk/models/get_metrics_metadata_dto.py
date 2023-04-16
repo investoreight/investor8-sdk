@@ -42,7 +42,10 @@ class GetMetricsMetadataDto(object):
         'remarks': 'str',
         'aliases': 'str',
         'colorable': 'bool',
-        'short_description': 'str'
+        'short_description': 'str',
+        'soft_delete': 'bool',
+        'screening_conditions': 'list[ScreeningCondition]',
+        'internal_comment': 'str'
     }
 
     attribute_map = {
@@ -60,10 +63,13 @@ class GetMetricsMetadataDto(object):
         'remarks': 'Remarks',
         'aliases': 'Aliases',
         'colorable': 'Colorable',
-        'short_description': 'ShortDescription'
+        'short_description': 'ShortDescription',
+        'soft_delete': 'SoftDelete',
+        'screening_conditions': 'ScreeningConditions',
+        'internal_comment': 'InternalComment'
     }
 
-    def __init__(self, id=None, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, aliases=None, colorable=None, short_description=None):  # noqa: E501
+    def __init__(self, id=None, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, aliases=None, colorable=None, short_description=None, soft_delete=None, screening_conditions=None, internal_comment=None):  # noqa: E501
         """GetMetricsMetadataDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._metric_name = None
@@ -80,6 +86,9 @@ class GetMetricsMetadataDto(object):
         self._aliases = None
         self._colorable = None
         self._short_description = None
+        self._soft_delete = None
+        self._screening_conditions = None
+        self._internal_comment = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -111,6 +120,12 @@ class GetMetricsMetadataDto(object):
             self.colorable = colorable
         if short_description is not None:
             self.short_description = short_description
+        if soft_delete is not None:
+            self.soft_delete = soft_delete
+        if screening_conditions is not None:
+            self.screening_conditions = screening_conditions
+        if internal_comment is not None:
+            self.internal_comment = internal_comment
 
     @property
     def id(self):
@@ -426,6 +441,69 @@ class GetMetricsMetadataDto(object):
         """
 
         self._short_description = short_description
+
+    @property
+    def soft_delete(self):
+        """Gets the soft_delete of this GetMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The soft_delete of this GetMetricsMetadataDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._soft_delete
+
+    @soft_delete.setter
+    def soft_delete(self, soft_delete):
+        """Sets the soft_delete of this GetMetricsMetadataDto.
+
+
+        :param soft_delete: The soft_delete of this GetMetricsMetadataDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._soft_delete = soft_delete
+
+    @property
+    def screening_conditions(self):
+        """Gets the screening_conditions of this GetMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The screening_conditions of this GetMetricsMetadataDto.  # noqa: E501
+        :rtype: list[ScreeningCondition]
+        """
+        return self._screening_conditions
+
+    @screening_conditions.setter
+    def screening_conditions(self, screening_conditions):
+        """Sets the screening_conditions of this GetMetricsMetadataDto.
+
+
+        :param screening_conditions: The screening_conditions of this GetMetricsMetadataDto.  # noqa: E501
+        :type: list[ScreeningCondition]
+        """
+
+        self._screening_conditions = screening_conditions
+
+    @property
+    def internal_comment(self):
+        """Gets the internal_comment of this GetMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The internal_comment of this GetMetricsMetadataDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._internal_comment
+
+    @internal_comment.setter
+    def internal_comment(self, internal_comment):
+        """Sets the internal_comment of this GetMetricsMetadataDto.
+
+
+        :param internal_comment: The internal_comment of this GetMetricsMetadataDto.  # noqa: E501
+        :type: str
+        """
+
+        self._internal_comment = internal_comment
 
     def to_dict(self):
         """Returns the model properties as a dict"""

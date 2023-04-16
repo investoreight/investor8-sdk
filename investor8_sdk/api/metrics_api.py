@@ -1760,6 +1760,7 @@ class MetricsApi(object):
         :param str display_format:
         :param str data_format:
         :param str name:
+        :param str soft_delete:
         :param int page_index:
         :param int page_size:
         :param str sort_by:
@@ -1789,6 +1790,7 @@ class MetricsApi(object):
         :param str display_format:
         :param str data_format:
         :param str name:
+        :param str soft_delete:
         :param int page_index:
         :param int page_size:
         :param str sort_by:
@@ -1798,7 +1800,7 @@ class MetricsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['category', 'type', 'display_format', 'data_format', 'name', 'page_index', 'page_size', 'sort_by', 'sort_direction']  # noqa: E501
+        all_params = ['category', 'type', 'display_format', 'data_format', 'name', 'soft_delete', 'page_index', 'page_size', 'sort_by', 'sort_direction']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1829,6 +1831,8 @@ class MetricsApi(object):
             query_params.append(('dataFormat', params['data_format']))  # noqa: E501
         if 'name' in params:
             query_params.append(('name', params['name']))  # noqa: E501
+        if 'soft_delete' in params:
+            query_params.append(('softDelete', params['soft_delete']))  # noqa: E501
         if 'page_index' in params:
             query_params.append(('pageIndex', params['page_index']))  # noqa: E501
         if 'page_size' in params:

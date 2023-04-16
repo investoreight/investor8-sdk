@@ -40,7 +40,8 @@ class GetListMetricsMetadataDto(object):
         'period_type_default': 'str',
         'aliases': 'str',
         'colorable': 'bool',
-        'short_description': 'str'
+        'short_description': 'str',
+        'soft_delete': 'bool'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class GetListMetricsMetadataDto(object):
         'period_type_default': 'PeriodTypeDefault',
         'aliases': 'Aliases',
         'colorable': 'Colorable',
-        'short_description': 'ShortDescription'
+        'short_description': 'ShortDescription',
+        'soft_delete': 'SoftDelete'
     }
 
-    def __init__(self, id=None, metric_name=None, display_name=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, aliases=None, colorable=None, short_description=None):  # noqa: E501
+    def __init__(self, id=None, metric_name=None, display_name=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, aliases=None, colorable=None, short_description=None, soft_delete=None):  # noqa: E501
         """GetListMetricsMetadataDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._metric_name = None
@@ -74,6 +76,7 @@ class GetListMetricsMetadataDto(object):
         self._aliases = None
         self._colorable = None
         self._short_description = None
+        self._soft_delete = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -101,6 +104,8 @@ class GetListMetricsMetadataDto(object):
             self.colorable = colorable
         if short_description is not None:
             self.short_description = short_description
+        if soft_delete is not None:
+            self.soft_delete = soft_delete
 
     @property
     def id(self):
@@ -374,6 +379,27 @@ class GetListMetricsMetadataDto(object):
         """
 
         self._short_description = short_description
+
+    @property
+    def soft_delete(self):
+        """Gets the soft_delete of this GetListMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The soft_delete of this GetListMetricsMetadataDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._soft_delete
+
+    @soft_delete.setter
+    def soft_delete(self, soft_delete):
+        """Sets the soft_delete of this GetListMetricsMetadataDto.
+
+
+        :param soft_delete: The soft_delete of this GetListMetricsMetadataDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._soft_delete = soft_delete
 
     def to_dict(self):
         """Returns the model properties as a dict"""
