@@ -33,7 +33,19 @@ class CurrentMetricsDto(object):
         'input_metric': 'str',
         'value': 'str',
         'period': 'str',
-        'period_date_time': 'datetime'
+        'last_modified': 'datetime',
+        'overall_rank': 'int',
+        'overall_count': 'int',
+        'spx_rank': 'int',
+        'spx_count': 'int',
+        'nasdaq_rank': 'int',
+        'nasdaq_count': 'int',
+        'dow_rank': 'int',
+        'dow_count': 'int',
+        'sector_rank': 'int',
+        'sector_count': 'int',
+        'industry_rank': 'int',
+        'industry_count': 'int'
     }
 
     attribute_map = {
@@ -42,17 +54,41 @@ class CurrentMetricsDto(object):
         'input_metric': 'InputMetric',
         'value': 'Value',
         'period': 'Period',
-        'period_date_time': 'PeriodDateTime'
+        'last_modified': 'LastModified',
+        'overall_rank': 'OverallRank',
+        'overall_count': 'OverallCount',
+        'spx_rank': 'SpxRank',
+        'spx_count': 'SpxCount',
+        'nasdaq_rank': 'NasdaqRank',
+        'nasdaq_count': 'NasdaqCount',
+        'dow_rank': 'DowRank',
+        'dow_count': 'DowCount',
+        'sector_rank': 'SectorRank',
+        'sector_count': 'SectorCount',
+        'industry_rank': 'IndustryRank',
+        'industry_count': 'IndustryCount'
     }
 
-    def __init__(self, symbol=None, metric=None, input_metric=None, value=None, period=None, period_date_time=None):  # noqa: E501
+    def __init__(self, symbol=None, metric=None, input_metric=None, value=None, period=None, last_modified=None, overall_rank=None, overall_count=None, spx_rank=None, spx_count=None, nasdaq_rank=None, nasdaq_count=None, dow_rank=None, dow_count=None, sector_rank=None, sector_count=None, industry_rank=None, industry_count=None):  # noqa: E501
         """CurrentMetricsDto - a model defined in Swagger"""  # noqa: E501
         self._symbol = None
         self._metric = None
         self._input_metric = None
         self._value = None
         self._period = None
-        self._period_date_time = None
+        self._last_modified = None
+        self._overall_rank = None
+        self._overall_count = None
+        self._spx_rank = None
+        self._spx_count = None
+        self._nasdaq_rank = None
+        self._nasdaq_count = None
+        self._dow_rank = None
+        self._dow_count = None
+        self._sector_rank = None
+        self._sector_count = None
+        self._industry_rank = None
+        self._industry_count = None
         self.discriminator = None
         if symbol is not None:
             self.symbol = symbol
@@ -64,8 +100,32 @@ class CurrentMetricsDto(object):
             self.value = value
         if period is not None:
             self.period = period
-        if period_date_time is not None:
-            self.period_date_time = period_date_time
+        if last_modified is not None:
+            self.last_modified = last_modified
+        if overall_rank is not None:
+            self.overall_rank = overall_rank
+        if overall_count is not None:
+            self.overall_count = overall_count
+        if spx_rank is not None:
+            self.spx_rank = spx_rank
+        if spx_count is not None:
+            self.spx_count = spx_count
+        if nasdaq_rank is not None:
+            self.nasdaq_rank = nasdaq_rank
+        if nasdaq_count is not None:
+            self.nasdaq_count = nasdaq_count
+        if dow_rank is not None:
+            self.dow_rank = dow_rank
+        if dow_count is not None:
+            self.dow_count = dow_count
+        if sector_rank is not None:
+            self.sector_rank = sector_rank
+        if sector_count is not None:
+            self.sector_count = sector_count
+        if industry_rank is not None:
+            self.industry_rank = industry_rank
+        if industry_count is not None:
+            self.industry_count = industry_count
 
     @property
     def symbol(self):
@@ -173,25 +233,277 @@ class CurrentMetricsDto(object):
         self._period = period
 
     @property
-    def period_date_time(self):
-        """Gets the period_date_time of this CurrentMetricsDto.  # noqa: E501
+    def last_modified(self):
+        """Gets the last_modified of this CurrentMetricsDto.  # noqa: E501
 
 
-        :return: The period_date_time of this CurrentMetricsDto.  # noqa: E501
+        :return: The last_modified of this CurrentMetricsDto.  # noqa: E501
         :rtype: datetime
         """
-        return self._period_date_time
+        return self._last_modified
 
-    @period_date_time.setter
-    def period_date_time(self, period_date_time):
-        """Sets the period_date_time of this CurrentMetricsDto.
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        """Sets the last_modified of this CurrentMetricsDto.
 
 
-        :param period_date_time: The period_date_time of this CurrentMetricsDto.  # noqa: E501
+        :param last_modified: The last_modified of this CurrentMetricsDto.  # noqa: E501
         :type: datetime
         """
 
-        self._period_date_time = period_date_time
+        self._last_modified = last_modified
+
+    @property
+    def overall_rank(self):
+        """Gets the overall_rank of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The overall_rank of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._overall_rank
+
+    @overall_rank.setter
+    def overall_rank(self, overall_rank):
+        """Sets the overall_rank of this CurrentMetricsDto.
+
+
+        :param overall_rank: The overall_rank of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._overall_rank = overall_rank
+
+    @property
+    def overall_count(self):
+        """Gets the overall_count of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The overall_count of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._overall_count
+
+    @overall_count.setter
+    def overall_count(self, overall_count):
+        """Sets the overall_count of this CurrentMetricsDto.
+
+
+        :param overall_count: The overall_count of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._overall_count = overall_count
+
+    @property
+    def spx_rank(self):
+        """Gets the spx_rank of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The spx_rank of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._spx_rank
+
+    @spx_rank.setter
+    def spx_rank(self, spx_rank):
+        """Sets the spx_rank of this CurrentMetricsDto.
+
+
+        :param spx_rank: The spx_rank of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._spx_rank = spx_rank
+
+    @property
+    def spx_count(self):
+        """Gets the spx_count of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The spx_count of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._spx_count
+
+    @spx_count.setter
+    def spx_count(self, spx_count):
+        """Sets the spx_count of this CurrentMetricsDto.
+
+
+        :param spx_count: The spx_count of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._spx_count = spx_count
+
+    @property
+    def nasdaq_rank(self):
+        """Gets the nasdaq_rank of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The nasdaq_rank of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._nasdaq_rank
+
+    @nasdaq_rank.setter
+    def nasdaq_rank(self, nasdaq_rank):
+        """Sets the nasdaq_rank of this CurrentMetricsDto.
+
+
+        :param nasdaq_rank: The nasdaq_rank of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._nasdaq_rank = nasdaq_rank
+
+    @property
+    def nasdaq_count(self):
+        """Gets the nasdaq_count of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The nasdaq_count of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._nasdaq_count
+
+    @nasdaq_count.setter
+    def nasdaq_count(self, nasdaq_count):
+        """Sets the nasdaq_count of this CurrentMetricsDto.
+
+
+        :param nasdaq_count: The nasdaq_count of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._nasdaq_count = nasdaq_count
+
+    @property
+    def dow_rank(self):
+        """Gets the dow_rank of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The dow_rank of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._dow_rank
+
+    @dow_rank.setter
+    def dow_rank(self, dow_rank):
+        """Sets the dow_rank of this CurrentMetricsDto.
+
+
+        :param dow_rank: The dow_rank of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._dow_rank = dow_rank
+
+    @property
+    def dow_count(self):
+        """Gets the dow_count of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The dow_count of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._dow_count
+
+    @dow_count.setter
+    def dow_count(self, dow_count):
+        """Sets the dow_count of this CurrentMetricsDto.
+
+
+        :param dow_count: The dow_count of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._dow_count = dow_count
+
+    @property
+    def sector_rank(self):
+        """Gets the sector_rank of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The sector_rank of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._sector_rank
+
+    @sector_rank.setter
+    def sector_rank(self, sector_rank):
+        """Sets the sector_rank of this CurrentMetricsDto.
+
+
+        :param sector_rank: The sector_rank of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._sector_rank = sector_rank
+
+    @property
+    def sector_count(self):
+        """Gets the sector_count of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The sector_count of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._sector_count
+
+    @sector_count.setter
+    def sector_count(self, sector_count):
+        """Sets the sector_count of this CurrentMetricsDto.
+
+
+        :param sector_count: The sector_count of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._sector_count = sector_count
+
+    @property
+    def industry_rank(self):
+        """Gets the industry_rank of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The industry_rank of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._industry_rank
+
+    @industry_rank.setter
+    def industry_rank(self, industry_rank):
+        """Sets the industry_rank of this CurrentMetricsDto.
+
+
+        :param industry_rank: The industry_rank of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._industry_rank = industry_rank
+
+    @property
+    def industry_count(self):
+        """Gets the industry_count of this CurrentMetricsDto.  # noqa: E501
+
+
+        :return: The industry_count of this CurrentMetricsDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._industry_count
+
+    @industry_count.setter
+    def industry_count(self, industry_count):
+        """Sets the industry_count of this CurrentMetricsDto.
+
+
+        :param industry_count: The industry_count of this CurrentMetricsDto.  # noqa: E501
+        :type: int
+        """
+
+        self._industry_count = industry_count
 
     def to_dict(self):
         """Returns the model properties as a dict"""
