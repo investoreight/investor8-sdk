@@ -76,6 +76,7 @@ from investor8_sdk.models.market_highlight_dto import MarketHighlightDto
 from investor8_sdk.models.market_highlight_status import MarketHighlightStatus
 from investor8_sdk.models.metadata_properties_dto import MetadataPropertiesDto
 from investor8_sdk.models.metrics import Metrics
+from investor8_sdk.models.metrics_by_period_dto import MetricsByPeriodDto
 from investor8_sdk.models.metrics_metadata_response_dto import MetricsMetadataResponseDto
 from investor8_sdk.models.momentum_metric_dto import MomentumMetricDto
 from investor8_sdk.models.monthly_metrics import MonthlyMetrics

@@ -41,7 +41,9 @@ class FinancialTag(object):
         'sub_section_name': 'str',
         'tag_order': 'int',
         'section_order': 'int',
-        'sub_section_order': 'int'
+        'sub_section_order': 'int',
+        'metric_name': 'str',
+        'short_description': 'str'
     }
 
     attribute_map = {
@@ -58,10 +60,12 @@ class FinancialTag(object):
         'sub_section_name': 'SubSectionName',
         'tag_order': 'TagOrder',
         'section_order': 'SectionOrder',
-        'sub_section_order': 'SubSectionOrder'
+        'sub_section_order': 'SubSectionOrder',
+        'metric_name': 'MetricName',
+        'short_description': 'ShortDescription'
     }
 
-    def __init__(self, tag_name=None, display_name=None, unit=None, value=None, parent=None, balance=None, factor=None, order=None, is_significant=None, section_name=None, sub_section_name=None, tag_order=None, section_order=None, sub_section_order=None):  # noqa: E501
+    def __init__(self, tag_name=None, display_name=None, unit=None, value=None, parent=None, balance=None, factor=None, order=None, is_significant=None, section_name=None, sub_section_name=None, tag_order=None, section_order=None, sub_section_order=None, metric_name=None, short_description=None):  # noqa: E501
         """FinancialTag - a model defined in Swagger"""  # noqa: E501
         self._tag_name = None
         self._display_name = None
@@ -77,6 +81,8 @@ class FinancialTag(object):
         self._tag_order = None
         self._section_order = None
         self._sub_section_order = None
+        self._metric_name = None
+        self._short_description = None
         self.discriminator = None
         if tag_name is not None:
             self.tag_name = tag_name
@@ -106,6 +112,10 @@ class FinancialTag(object):
             self.section_order = section_order
         if sub_section_order is not None:
             self.sub_section_order = sub_section_order
+        if metric_name is not None:
+            self.metric_name = metric_name
+        if short_description is not None:
+            self.short_description = short_description
 
     @property
     def tag_name(self):
@@ -400,6 +410,48 @@ class FinancialTag(object):
         """
 
         self._sub_section_order = sub_section_order
+
+    @property
+    def metric_name(self):
+        """Gets the metric_name of this FinancialTag.  # noqa: E501
+
+
+        :return: The metric_name of this FinancialTag.  # noqa: E501
+        :rtype: str
+        """
+        return self._metric_name
+
+    @metric_name.setter
+    def metric_name(self, metric_name):
+        """Sets the metric_name of this FinancialTag.
+
+
+        :param metric_name: The metric_name of this FinancialTag.  # noqa: E501
+        :type: str
+        """
+
+        self._metric_name = metric_name
+
+    @property
+    def short_description(self):
+        """Gets the short_description of this FinancialTag.  # noqa: E501
+
+
+        :return: The short_description of this FinancialTag.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_description
+
+    @short_description.setter
+    def short_description(self, short_description):
+        """Sets the short_description of this FinancialTag.
+
+
+        :param short_description: The short_description of this FinancialTag.  # noqa: E501
+        :type: str
+        """
+
+        self._short_description = short_description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

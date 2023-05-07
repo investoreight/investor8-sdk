@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **tag_order** | **int** |  | [optional] 
 **section_order** | **int** |  | [optional] 
 **sub_section_order** | **int** |  | [optional] 
+**metric_name** | **str** |  | [optional] 
+**short_description** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
