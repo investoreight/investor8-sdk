@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "investor8-sdk"
-VERSION = "1.1.78"
+VERSION = "1.1.79"
 # To install the library, run the following
 #
 # python setup.py install
