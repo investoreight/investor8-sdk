@@ -41,7 +41,8 @@ class GetListMetricsMetadataDto(object):
         'aliases': 'str',
         'colorable': 'bool',
         'short_description': 'str',
-        'soft_delete': 'bool'
+        'soft_delete': 'bool',
+        'screening_bounds': 'dict(str, list[float])'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class GetListMetricsMetadataDto(object):
         'aliases': 'Aliases',
         'colorable': 'Colorable',
         'short_description': 'ShortDescription',
-        'soft_delete': 'SoftDelete'
+        'soft_delete': 'SoftDelete',
+        'screening_bounds': 'ScreeningBounds'
     }
 
-    def __init__(self, id=None, metric_name=None, display_name=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, aliases=None, colorable=None, short_description=None, soft_delete=None):  # noqa: E501
+    def __init__(self, id=None, metric_name=None, display_name=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, aliases=None, colorable=None, short_description=None, soft_delete=None, screening_bounds=None):  # noqa: E501
         """GetListMetricsMetadataDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._metric_name = None
@@ -77,6 +79,7 @@ class GetListMetricsMetadataDto(object):
         self._colorable = None
         self._short_description = None
         self._soft_delete = None
+        self._screening_bounds = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -106,6 +109,8 @@ class GetListMetricsMetadataDto(object):
             self.short_description = short_description
         if soft_delete is not None:
             self.soft_delete = soft_delete
+        if screening_bounds is not None:
+            self.screening_bounds = screening_bounds
 
     @property
     def id(self):
@@ -400,6 +405,27 @@ class GetListMetricsMetadataDto(object):
         """
 
         self._soft_delete = soft_delete
+
+    @property
+    def screening_bounds(self):
+        """Gets the screening_bounds of this GetListMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The screening_bounds of this GetListMetricsMetadataDto.  # noqa: E501
+        :rtype: dict(str, list[float])
+        """
+        return self._screening_bounds
+
+    @screening_bounds.setter
+    def screening_bounds(self, screening_bounds):
+        """Sets the screening_bounds of this GetListMetricsMetadataDto.
+
+
+        :param screening_bounds: The screening_bounds of this GetListMetricsMetadataDto.  # noqa: E501
+        :type: dict(str, list[float])
+        """
+
+        self._screening_bounds = screening_bounds
 
     def to_dict(self):
         """Returns the model properties as a dict"""
