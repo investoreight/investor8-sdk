@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**get_current_metrics**](MetricsApi.md#get_current_metrics) | **GET** /Metrics/current | 
 [**get_current_momentum**](MetricsApi.md#get_current_momentum) | **GET** /Metrics/momentum/current/{ticker} | 
 [**get_distinct_metric_metadata_properties**](MetricsApi.md#get_distinct_metric_metadata_properties) | **GET** /Metrics/metadata/properties/distinct | 
-[**get_distinct_metric_metadata_screening_conditions**](MetricsApi.md#get_distinct_metric_metadata_screening_conditions) | **GET** /Metrics/metadata/screeningconditions/distinct | 
 [**get_historical_daily_metrics**](MetricsApi.md#get_historical_daily_metrics) | **GET** /Metrics/historical/daily/{ticker} | 
 [**get_historical_growth_metrics**](MetricsApi.md#get_historical_growth_metrics) | **GET** /Metrics/growth/historical/{ticker} | 
 [**get_historical_indicators**](MetricsApi.md#get_historical_indicators) | **GET** /Metrics/historical/indicators/{ticker} | 
@@ -23,7 +22,6 @@ Method | HTTP request | Description
 [**get_latest_growth_metrics**](MetricsApi.md#get_latest_growth_metrics) | **GET** /Metrics/growth/latest/{ticker} | 
 [**get_list_financial_metrics_metadata**](MetricsApi.md#get_list_financial_metrics_metadata) | **GET** /Metrics/metadata/list/financials | 
 [**get_list_metrics_metadata**](MetricsApi.md#get_list_metrics_metadata) | **GET** /Metrics/metadata/list | 
-[**get_list_metrics_screening_conditions**](MetricsApi.md#get_list_metrics_screening_conditions) | **GET** /Metrics/screeningconditions/list | 
 [**get_market_index_returns**](MetricsApi.md#get_market_index_returns) | **GET** /Metrics/merket/returns/{ticker} | 
 [**get_metrics_by_period**](MetricsApi.md#get_metrics_by_period) | **GET** /Metrics/byperiod | 
 [**get_metrics_metadata**](MetricsApi.md#get_metrics_metadata) | **GET** /Metrics/metadata/{name} | 
@@ -480,58 +478,6 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_distinct_metric_metadata_screening_conditions**
-> list[ScreeningCondition] get_distinct_metric_metadata_screening_conditions()
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import investor8_sdk
-from investor8_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: apiKey
-configuration = investor8_sdk.Configuration()
-configuration.api_key['apiKey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apiKey'] = 'Bearer'
-# Configure API key authorization: bearerCoreAuth
-configuration = investor8_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = investor8_sdk.MetricsApi(investor8_sdk.ApiClient(configuration))
-
-try:
-    api_response = api_instance.get_distinct_metric_metadata_screening_conditions()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MetricsApi->get_distinct_metric_metadata_screening_conditions: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**list[ScreeningCondition]**](ScreeningCondition.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1133,64 +1079,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[GetListMetricsMetadataDto]**](GetListMetricsMetadataDto.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_list_metrics_screening_conditions**
-> list[GetListMetricsScreeningConditionsDto] get_list_metrics_screening_conditions(page_index=page_index, page_size=page_size)
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import investor8_sdk
-from investor8_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: apiKey
-configuration = investor8_sdk.Configuration()
-configuration.api_key['apiKey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apiKey'] = 'Bearer'
-# Configure API key authorization: bearerCoreAuth
-configuration = investor8_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = investor8_sdk.MetricsApi(investor8_sdk.ApiClient(configuration))
-page_index = 0 # int |  (optional) (default to 0)
-page_size = 1000 # int |  (optional) (default to 1000)
-
-try:
-    api_response = api_instance.get_list_metrics_screening_conditions(page_index=page_index, page_size=page_size)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MetricsApi->get_list_metrics_screening_conditions: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page_index** | **int**|  | [optional] [default to 0]
- **page_size** | **int**|  | [optional] [default to 1000]
-
-### Return type
-
-[**list[GetListMetricsScreeningConditionsDto]**](GetListMetricsScreeningConditionsDto.md)
 
 ### Authorization
 
