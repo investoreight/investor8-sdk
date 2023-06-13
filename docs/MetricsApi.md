@@ -21,8 +21,10 @@ Method | HTTP request | Description
 [**get_latest_financials_period**](MetricsApi.md#get_latest_financials_period) | **GET** /Metrics/financials/latest/period | 
 [**get_latest_growth_metrics**](MetricsApi.md#get_latest_growth_metrics) | **GET** /Metrics/growth/latest/{ticker} | 
 [**get_list_financial_metrics_metadata**](MetricsApi.md#get_list_financial_metrics_metadata) | **GET** /Metrics/metadata/list/financials | 
+[**get_list_metric_views**](MetricsApi.md#get_list_metric_views) | **GET** /Metrics/view/list | 
 [**get_list_metrics_metadata**](MetricsApi.md#get_list_metrics_metadata) | **GET** /Metrics/metadata/list | 
 [**get_market_index_returns**](MetricsApi.md#get_market_index_returns) | **GET** /Metrics/merket/returns/{ticker} | 
+[**get_metric_view**](MetricsApi.md#get_metric_view) | **GET** /Metrics/view/{id} | 
 [**get_metrics_by_period**](MetricsApi.md#get_metrics_by_period) | **GET** /Metrics/byperiod | 
 [**get_metrics_metadata**](MetricsApi.md#get_metrics_metadata) | **GET** /Metrics/metadata/{name} | 
 [**get_monthly_returns**](MetricsApi.md#get_monthly_returns) | **GET** /Metrics/returns/monthly/{ticker}/{sinceYear} | 
@@ -1017,6 +1019,58 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_list_metric_views**
+> list[GetListMetricViewsDto] get_list_metric_views()
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.MetricsApi(investor8_sdk.ApiClient(configuration))
+
+try:
+    api_response = api_instance.get_list_metric_views()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MetricsApi->get_list_metric_views: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[GetListMetricViewsDto]**](GetListMetricViewsDto.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_list_metrics_metadata**
 > list[GetListMetricsMetadataDto] get_list_metrics_metadata(category=category, type=type, display_format=display_format, data_format=data_format, name=name, soft_delete=soft_delete, page_index=page_index, page_size=page_size, sort_by=sort_by, sort_direction=sort_direction)
 
@@ -1137,6 +1191,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[PeriodReturn]**](PeriodReturn.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_metric_view**
+> GetMetricViewDto get_metric_view(id)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.MetricsApi(investor8_sdk.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    api_response = api_instance.get_metric_view(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MetricsApi->get_metric_view: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+[**GetMetricViewDto**](GetMetricViewDto.md)
 
 ### Authorization
 

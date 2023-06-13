@@ -33,7 +33,9 @@ from investor8_sdk.models.financial_metric_metadata_dto import FinancialMetricMe
 from investor8_sdk.models.financial_report_dto import FinancialReportDto
 from investor8_sdk.models.financial_tag import FinancialTag
 from investor8_sdk.models.financials_growth import FinancialsGrowth
+from investor8_sdk.models.get_list_metric_views_dto import GetListMetricViewsDto
 from investor8_sdk.models.get_list_metrics_metadata_dto import GetListMetricsMetadataDto
+from investor8_sdk.models.get_metric_view_dto import GetMetricViewDto
 from investor8_sdk.models.get_metrics_metadata_dto import GetMetricsMetadataDto
 from investor8_sdk.models.get_screens_by_user_dto import GetScreensByUserDto
 from investor8_sdk.models.get_watchlists_by_user_dto import GetWatchlistsByUserDto
@@ -59,6 +61,8 @@ from investor8_sdk.models.login_with_code_dto import LoginWithCodeDto
 from investor8_sdk.models.market_highlight_dto import MarketHighlightDto
 from investor8_sdk.models.market_highlight_status import MarketHighlightStatus
 from investor8_sdk.models.metadata_properties_dto import MetadataPropertiesDto
+from investor8_sdk.models.metric_group_dto import MetricGroupDto
+from investor8_sdk.models.metric_name_dto import MetricNameDto
 from investor8_sdk.models.metrics import Metrics
 from investor8_sdk.models.metrics_by_period_dto import MetricsByPeriodDto
 from investor8_sdk.models.metrics_metadata_response_dto import MetricsMetadataResponseDto
