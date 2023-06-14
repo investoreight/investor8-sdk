@@ -50,6 +50,7 @@ from investor8_sdk.models.financial_report_dto import FinancialReportDto
 from investor8_sdk.models.financial_tag import FinancialTag
 from investor8_sdk.models.financials_growth import FinancialsGrowth
 from investor8_sdk.models.get_list_metric_views_dto import GetListMetricViewsDto
+from investor8_sdk.models.get_list_metrics_description_dto import GetListMetricsDescriptionDto
 from investor8_sdk.models.get_list_metrics_metadata_dto import GetListMetricsMetadataDto
 from investor8_sdk.models.get_metric_view_dto import GetMetricViewDto
 from investor8_sdk.models.get_metrics_metadata_dto import GetMetricsMetadataDto
