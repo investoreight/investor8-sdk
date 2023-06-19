@@ -102,6 +102,7 @@ from investor8_sdk.models.sa_attributes_prices import SAAttributesPrices
 from investor8_sdk.models.sa_sector_price_dto import SASectorPriceDto
 from investor8_sdk.models.screen import Screen
 from investor8_sdk.models.screen_dto import ScreenDto
+from investor8_sdk.models.screening_category_dto import ScreeningCategoryDto
 from investor8_sdk.models.sector_returns_dto import SectorReturnsDto
 from investor8_sdk.models.standardized_financial import StandardizedFinancial
 from investor8_sdk.models.stock_earning_dto import StockEarningDto

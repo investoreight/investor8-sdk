@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **soft_delete** | **bool** |  | [optional] 
 **internal_comment** | **str** |  | [optional] 
 **screening_bounds** | **dict(str, list[float])** |  | [optional] 
+**screening_categories** | [**list[ScreeningCategoryDto]**](ScreeningCategoryDto.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

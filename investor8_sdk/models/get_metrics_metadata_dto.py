@@ -45,7 +45,8 @@ class GetMetricsMetadataDto(object):
         'short_description': 'str',
         'soft_delete': 'bool',
         'internal_comment': 'str',
-        'screening_bounds': 'dict(str, list[float])'
+        'screening_bounds': 'dict(str, list[float])',
+        'screening_categories': 'list[ScreeningCategoryDto]'
     }
 
     attribute_map = {
@@ -66,10 +67,11 @@ class GetMetricsMetadataDto(object):
         'short_description': 'ShortDescription',
         'soft_delete': 'SoftDelete',
         'internal_comment': 'InternalComment',
-        'screening_bounds': 'ScreeningBounds'
+        'screening_bounds': 'ScreeningBounds',
+        'screening_categories': 'ScreeningCategories'
     }
 
-    def __init__(self, id=None, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, aliases=None, colorable=None, short_description=None, soft_delete=None, internal_comment=None, screening_bounds=None):  # noqa: E501
+    def __init__(self, id=None, metric_name=None, display_name=None, description=None, unit=None, categories=None, data_format=None, display_format=None, type=None, last_modified=None, period_type_default=None, remarks=None, aliases=None, colorable=None, short_description=None, soft_delete=None, internal_comment=None, screening_bounds=None, screening_categories=None):  # noqa: E501
         """GetMetricsMetadataDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._metric_name = None
@@ -89,6 +91,7 @@ class GetMetricsMetadataDto(object):
         self._soft_delete = None
         self._internal_comment = None
         self._screening_bounds = None
+        self._screening_categories = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -126,6 +129,8 @@ class GetMetricsMetadataDto(object):
             self.internal_comment = internal_comment
         if screening_bounds is not None:
             self.screening_bounds = screening_bounds
+        if screening_categories is not None:
+            self.screening_categories = screening_categories
 
     @property
     def id(self):
@@ -504,6 +509,27 @@ class GetMetricsMetadataDto(object):
         """
 
         self._screening_bounds = screening_bounds
+
+    @property
+    def screening_categories(self):
+        """Gets the screening_categories of this GetMetricsMetadataDto.  # noqa: E501
+
+
+        :return: The screening_categories of this GetMetricsMetadataDto.  # noqa: E501
+        :rtype: list[ScreeningCategoryDto]
+        """
+        return self._screening_categories
+
+    @screening_categories.setter
+    def screening_categories(self, screening_categories):
+        """Sets the screening_categories of this GetMetricsMetadataDto.
+
+
+        :param screening_categories: The screening_categories of this GetMetricsMetadataDto.  # noqa: E501
+        :type: list[ScreeningCategoryDto]
+        """
+
+        self._screening_categories = screening_categories
 
     def to_dict(self):
         """Returns the model properties as a dict"""
