@@ -29,23 +29,28 @@ class ActiveCompanyDto(object):
     """
     swagger_types = {
         'ticker': 'str',
-        'name': 'str'
+        'name': 'str',
+        'peers': 'list[str]'
     }
 
     attribute_map = {
         'ticker': 'Ticker',
-        'name': 'Name'
+        'name': 'Name',
+        'peers': 'Peers'
     }
 
-    def __init__(self, ticker=None, name=None):  # noqa: E501
+    def __init__(self, ticker=None, name=None, peers=None):  # noqa: E501
         """ActiveCompanyDto - a model defined in Swagger"""  # noqa: E501
         self._ticker = None
         self._name = None
+        self._peers = None
         self.discriminator = None
         if ticker is not None:
             self.ticker = ticker
         if name is not None:
             self.name = name
+        if peers is not None:
+            self.peers = peers
 
     @property
     def ticker(self):
@@ -88,6 +93,27 @@ class ActiveCompanyDto(object):
         """
 
         self._name = name
+
+    @property
+    def peers(self):
+        """Gets the peers of this ActiveCompanyDto.  # noqa: E501
+
+
+        :return: The peers of this ActiveCompanyDto.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._peers
+
+    @peers.setter
+    def peers(self, peers):
+        """Sets the peers of this ActiveCompanyDto.
+
+
+        :param peers: The peers of this ActiveCompanyDto.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._peers = peers
 
     def to_dict(self):
         """Returns the model properties as a dict"""

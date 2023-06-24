@@ -35,7 +35,8 @@ class StockInfoDto(object):
         'sector': 'str',
         'is_spx': 'bool',
         'is_active': 'bool',
-        'ticker_slug': 'str'
+        'ticker_slug': 'str',
+        'peers': 'list[str]'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class StockInfoDto(object):
         'sector': 'Sector',
         'is_spx': 'IsSpx',
         'is_active': 'IsActive',
-        'ticker_slug': 'TickerSlug'
+        'ticker_slug': 'TickerSlug',
+        'peers': 'Peers'
     }
 
-    def __init__(self, security_id=None, ticker=None, exchange=None, name=None, sector=None, is_spx=None, is_active=None, ticker_slug=None):  # noqa: E501
+    def __init__(self, security_id=None, ticker=None, exchange=None, name=None, sector=None, is_spx=None, is_active=None, ticker_slug=None, peers=None):  # noqa: E501
         """StockInfoDto - a model defined in Swagger"""  # noqa: E501
         self._security_id = None
         self._ticker = None
@@ -59,6 +61,7 @@ class StockInfoDto(object):
         self._is_spx = None
         self._is_active = None
         self._ticker_slug = None
+        self._peers = None
         self.discriminator = None
         if security_id is not None:
             self.security_id = security_id
@@ -76,6 +79,8 @@ class StockInfoDto(object):
             self.is_active = is_active
         if ticker_slug is not None:
             self.ticker_slug = ticker_slug
+        if peers is not None:
+            self.peers = peers
 
     @property
     def security_id(self):
@@ -244,6 +249,27 @@ class StockInfoDto(object):
         """
 
         self._ticker_slug = ticker_slug
+
+    @property
+    def peers(self):
+        """Gets the peers of this StockInfoDto.  # noqa: E501
+
+
+        :return: The peers of this StockInfoDto.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._peers
+
+    @peers.setter
+    def peers(self, peers):
+        """Sets the peers of this StockInfoDto.
+
+
+        :param peers: The peers of this StockInfoDto.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._peers = peers
 
     def to_dict(self):
         """Returns the model properties as a dict"""
