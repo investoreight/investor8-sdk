@@ -8,6 +8,9 @@ Method | HTTP request | Description
 [**get_all_sectors_returns_today_sa**](ScreenerApi.md#get_all_sectors_returns_today_sa) | **GET** /Screener/sa/sector/returns/today | 
 [**get_dow_tickers**](ScreenerApi.md#get_dow_tickers) | **GET** /Screener/dow/tickers | 
 [**get_list_ip_os**](ScreenerApi.md#get_list_ip_os) | **GET** /Screener/ipo/list | 
+[**get_list_screening_profiles**](ScreenerApi.md#get_list_screening_profiles) | **GET** /Screener/profile/list | 
+[**get_screening_profile**](ScreenerApi.md#get_screening_profile) | **GET** /Screener/profile/{id} | 
+[**get_screening_profile_by_name**](ScreenerApi.md#get_screening_profile_by_name) | **GET** /Screener/profile/name/{name} | 
 [**get_top_stocks**](ScreenerApi.md#get_top_stocks) | **GET** /Screener/top/{category} | 
 [**get_upcoming_ipos**](ScreenerApi.md#get_upcoming_ipos) | **GET** /Screener/ipo/upcoming | 
 [**search**](ScreenerApi.md#search) | **GET** /Screener/search | 
@@ -226,6 +229,170 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[StockIpo]**](StockIpo.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_list_screening_profiles**
+> list[GetListScreeningProfilesDto] get_list_screening_profiles()
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.ScreenerApi(investor8_sdk.ApiClient(configuration))
+
+try:
+    api_response = api_instance.get_list_screening_profiles()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ScreenerApi->get_list_screening_profiles: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[GetListScreeningProfilesDto]**](GetListScreeningProfilesDto.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_screening_profile**
+> GetScreeningProfileDto get_screening_profile(id)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.ScreenerApi(investor8_sdk.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    api_response = api_instance.get_screening_profile(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ScreenerApi->get_screening_profile: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+[**GetScreeningProfileDto**](GetScreeningProfileDto.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearerCoreAuth](../README.md#bearerCoreAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_screening_profile_by_name**
+> GetScreeningProfileDto get_screening_profile_by_name(name)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import investor8_sdk
+from investor8_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = investor8_sdk.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearerCoreAuth
+configuration = investor8_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = investor8_sdk.ScreenerApi(investor8_sdk.ApiClient(configuration))
+name = 'name_example' # str | 
+
+try:
+    api_response = api_instance.get_screening_profile_by_name(name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ScreenerApi->get_screening_profile_by_name: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**|  | 
+
+### Return type
+
+[**GetScreeningProfileDto**](GetScreeningProfileDto.md)
 
 ### Authorization
 
