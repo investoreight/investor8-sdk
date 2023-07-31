@@ -69,6 +69,7 @@ from investor8_sdk.models.metric_name_dto import MetricNameDto
 from investor8_sdk.models.metrics import Metrics
 from investor8_sdk.models.metrics_by_period_dto import MetricsByPeriodDto
 from investor8_sdk.models.metrics_metadata_response_dto import MetricsMetadataResponseDto
+from investor8_sdk.models.metrics_statistics_dto import MetricsStatisticsDto
 from investor8_sdk.models.momentum_metric_dto import MomentumMetricDto
 from investor8_sdk.models.monthly_metrics import MonthlyMetrics
 from investor8_sdk.models.monthly_returns import MonthlyReturns
