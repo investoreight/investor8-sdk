@@ -30,6 +30,7 @@ class GetListScreeningProfilesDto(object):
     swagger_types = {
         'id': 'str',
         'profile_name': 'str',
+        'display_name': 'str',
         'conditions': 'str',
         'sort_metric': 'str',
         'sort_order': 'str'
@@ -38,15 +39,17 @@ class GetListScreeningProfilesDto(object):
     attribute_map = {
         'id': 'Id',
         'profile_name': 'ProfileName',
+        'display_name': 'DisplayName',
         'conditions': 'Conditions',
         'sort_metric': 'SortMetric',
         'sort_order': 'SortOrder'
     }
 
-    def __init__(self, id=None, profile_name=None, conditions=None, sort_metric=None, sort_order=None):  # noqa: E501
+    def __init__(self, id=None, profile_name=None, display_name=None, conditions=None, sort_metric=None, sort_order=None):  # noqa: E501
         """GetListScreeningProfilesDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._profile_name = None
+        self._display_name = None
         self._conditions = None
         self._sort_metric = None
         self._sort_order = None
@@ -55,6 +58,8 @@ class GetListScreeningProfilesDto(object):
             self.id = id
         if profile_name is not None:
             self.profile_name = profile_name
+        if display_name is not None:
+            self.display_name = display_name
         if conditions is not None:
             self.conditions = conditions
         if sort_metric is not None:
@@ -103,6 +108,27 @@ class GetListScreeningProfilesDto(object):
         """
 
         self._profile_name = profile_name
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this GetListScreeningProfilesDto.  # noqa: E501
+
+
+        :return: The display_name of this GetListScreeningProfilesDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this GetListScreeningProfilesDto.
+
+
+        :param display_name: The display_name of this GetListScreeningProfilesDto.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     @property
     def conditions(self):

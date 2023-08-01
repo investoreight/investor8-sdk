@@ -30,6 +30,7 @@ class GetScreeningProfileDto(object):
     swagger_types = {
         'id': 'str',
         'profile_name': 'str',
+        'display_name': 'str',
         'conditions': 'str',
         'user_id': 'str',
         'type': 'str',
@@ -41,6 +42,7 @@ class GetScreeningProfileDto(object):
     attribute_map = {
         'id': 'Id',
         'profile_name': 'ProfileName',
+        'display_name': 'DisplayName',
         'conditions': 'Conditions',
         'user_id': 'UserId',
         'type': 'Type',
@@ -49,10 +51,11 @@ class GetScreeningProfileDto(object):
         'last_modified': 'LastModified'
     }
 
-    def __init__(self, id=None, profile_name=None, conditions=None, user_id=None, type=None, sort_metric=None, sort_order=None, last_modified=None):  # noqa: E501
+    def __init__(self, id=None, profile_name=None, display_name=None, conditions=None, user_id=None, type=None, sort_metric=None, sort_order=None, last_modified=None):  # noqa: E501
         """GetScreeningProfileDto - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._profile_name = None
+        self._display_name = None
         self._conditions = None
         self._user_id = None
         self._type = None
@@ -64,6 +67,8 @@ class GetScreeningProfileDto(object):
             self.id = id
         if profile_name is not None:
             self.profile_name = profile_name
+        if display_name is not None:
+            self.display_name = display_name
         if conditions is not None:
             self.conditions = conditions
         if user_id is not None:
@@ -118,6 +123,27 @@ class GetScreeningProfileDto(object):
         """
 
         self._profile_name = profile_name
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this GetScreeningProfileDto.  # noqa: E501
+
+
+        :return: The display_name of this GetScreeningProfileDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this GetScreeningProfileDto.
+
+
+        :param display_name: The display_name of this GetScreeningProfileDto.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
 
     @property
     def conditions(self):

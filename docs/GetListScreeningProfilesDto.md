@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **profile_name** | **str** |  | [optional] 
+**display_name** | **str** |  | [optional] 
 **conditions** | **str** |  | [optional] 
 **sort_metric** | **str** |  | [optional] 
 **sort_order** | **str** |  | [optional] 

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **profile_name** | **str** |  | [optional] 
+**display_name** | **str** |  | [optional] 
 **conditions** | **str** |  | [optional] 
 **user_id** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
